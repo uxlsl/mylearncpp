@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 #include <numeric>
 #include <vector>
-// 测试集为 MyTest，测试案例为 Sum
+
+#include "my.hpp"
+
 TEST(MyTest, Sum)
 {
     std::vector<int> vec{1, 2, 3, 4, 5};
@@ -16,6 +18,22 @@ TEST(MyTest, Abs)
 }
 
 
+TEST(MyTest, sizeof)
+{
+
+	EXPECT_EQ(sizeof('c'), 1);
+}
+
+TEST(MyTest, add)
+{
+    EXPECT_EQ(add(), 10);
+}
+
+TEST(MyTest, Second)
+{
+    int a = Second::add(1,3);
+    EXPECT_EQ(a, 4);
+}
 
 
 int main(int argc, char *argv[])
