@@ -64,6 +64,11 @@ TEST(MyTest, Ref1)
     EXPECT_EQ(i, 100);
 }
 
+TEST(MyTest, ECar)
+{
+    EXPECT_NE(ECar::SUV, ECar::Sedan);
+    EXPECT_EQ(GetMyCarType(), ECar::SUV);
+}
 
 
 int main(int argc, char *argv[])

@@ -21,3 +21,14 @@ int to100(int& i){
     i = 100;
     return i;
 }
+
+enum ECar
+{
+    SUV,
+    Wagon,
+    Sedan
+};
+
+ECar GetMyCarType(){
+    return ECar::SUV;
+}
