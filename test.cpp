@@ -50,6 +50,22 @@ TEST(MyTest, String)
     EXPECT_EQ(s, "11ab");
 }
 
+TEST(MyTest, Ref)
+{
+    string foo = "hi";
+    string& bar = foo;
+    EXPECT_EQ(foo, bar);
+}
+
+TEST(MyTest, Ref1)
+{
+    int i = 123;
+    ::to100(i);
+    EXPECT_EQ(i, 100);
+}
+
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
