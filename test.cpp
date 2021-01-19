@@ -1,8 +1,11 @@
 #include <gtest/gtest.h>
 #include <numeric>
 #include <vector>
-
+#include <string>
 #include "my.hpp"
+
+
+using namespace std;
 
 TEST(MyTest, Sum)
 {
@@ -33,8 +36,19 @@ TEST(MyTest, Second)
 {
     int a = Second::add(1,3);
     EXPECT_EQ(a, 4);
+    a = Second::add(1,2, 3);
+    EXPECT_EQ(a, 6);
 }
 
+TEST(MyTest, String)
+{
+    string x = "1";
+    string y = "1";
+    string s = x + y;
+    EXPECT_EQ(s, "11");
+    s.append("ab");
+    EXPECT_EQ(s, "11ab");
+}
 
 int main(int argc, char *argv[])
 {
