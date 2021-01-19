@@ -37,3 +37,21 @@ ECar GetMyCarType(){
 void f1(){
     std::cout << "Thread ok!" << endl;
 };
+
+
+class Dog{
+    std::string name;
+    int weight;
+
+    public:
+        Dog();
+        ~Dog();
+};
+
+Dog::Dog(){
+
+}
+
+Dog::~Dog(){
+
+}

@@ -82,6 +82,12 @@ TEST(MyTest, Filesystem)
 {
 }
 
+TEST(MyTest, Dog)
+{
+    Dog d;
+}
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
