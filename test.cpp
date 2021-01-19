@@ -2,10 +2,12 @@
 #include <numeric>
 #include <vector>
 #include <string>
+#include <thread>
 #include "my.hpp"
 
 
 using namespace std;
+
 
 TEST(MyTest, Sum)
 {
@@ -70,6 +72,15 @@ TEST(MyTest, ECar)
     EXPECT_EQ(GetMyCarType(), ECar::SUV);
 }
 
+TEST(MyTest, Thread)
+{
+    std::thread t(f1);
+    t.join();
+}
+
+TEST(MyTest, Filesystem)
+{
+}
 
 int main(int argc, char *argv[])
 {

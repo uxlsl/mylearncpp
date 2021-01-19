@@ -1,4 +1,5 @@
 #include<string>
+using namespace std;
 
 int add(int i=10){
     return i;
@@ -32,3 +33,7 @@ enum ECar
 ECar GetMyCarType(){
     return ECar::SUV;
 }
+
+void f1(){
+    std::cout << "Thread ok!" << endl;
+};
