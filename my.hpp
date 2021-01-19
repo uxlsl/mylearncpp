@@ -44,14 +44,19 @@ class Dog{
     int weight;
 
     public:
-        Dog();
+        Dog(string);
         ~Dog();
+        string getName();
 };
 
-Dog::Dog(){
-
+Dog::Dog(string dog_name){
+    name = dog_name;
 }
 
 Dog::~Dog(){
 
+}
+
+string Dog::getName(){
+    return name;
 }

@@ -84,7 +84,8 @@ TEST(MyTest, Filesystem)
 
 TEST(MyTest, Dog)
 {
-    Dog d;
+    Dog d("suv");
+    EXPECT_EQ(d.getName(), "suv");
 }
 
 
