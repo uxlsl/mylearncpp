@@ -96,6 +96,9 @@ TEST(MyTest, Init){
     int i{1};
     EXPECT_EQ(i, 1);
 }
+TEST(MyTest, aaa){
+    EXPECT_EQ(nullptr, nullptr);
+}
 
 int main(int argc, char *argv[])
 {
