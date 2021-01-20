@@ -88,6 +88,14 @@ TEST(MyTest, Dog)
     EXPECT_EQ(d.getName(), "suv");
 }
 
+TEST(MyTest, Auto){
+    EXPECT_EQ(getValue() , 100);
+}
+
+TEST(MyTest, Init){
+    int i{1};
+    EXPECT_EQ(i, 1);
+}
 
 int main(int argc, char *argv[])
 {

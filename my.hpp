@@ -60,3 +60,7 @@ Dog::~Dog(){
 string Dog::getName(){
     return name;
 }
+
+auto getValue(){
+    return 100;
+}
