@@ -122,6 +122,19 @@ TEST(MyTest, swap){
     std::cout << j << endl;
 }
 
+// 测试初始化
+TEST(MyTest, init){
+	int i(200);
+	EXPECT_EQ(i, 200);
+}
+
+TEST(MyTest, rvalue){
+	int &&i = 19;
+	EXPECT_EQ(i, 19);
+	int j = i;
+	EXPECT_EQ(19, j);
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
