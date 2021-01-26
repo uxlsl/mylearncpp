@@ -141,6 +141,7 @@ TEST(MyTest, lock){
 	std::lock_guard<std::mutex> lk(m);
 }
 
+// 利用变量退出作用时解锁!
 TEST(MyTest, lock2){
 	std::mutex m;
 	std::scoped_lock lock(m);
