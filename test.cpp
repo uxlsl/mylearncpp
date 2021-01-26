@@ -147,6 +147,13 @@ TEST(MyTest, lock2){
 	std::scoped_lock lock(m);
 }
 
+TEST(MyTest, st){
+
+	std::string s("hello world!");
+	EXPECT_EQ(s.find("xxxx"), s.npos);
+	EXPECT_EQ(s.find("he"), 0);
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
