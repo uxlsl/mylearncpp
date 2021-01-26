@@ -100,6 +100,28 @@ TEST(MyTest, aaa){
     EXPECT_EQ(nullptr, nullptr);
 }
 
+TEST(MyTest, ref){
+	int i = 100;
+	int &j = i;
+	EXPECT_EQ(i, j);
+}
+
+TEST(MyTest, fff){
+	int i = 100;
+	int && k = std::move(i);
+	EXPECT_EQ(i, k);
+}
+
+TEST(MyTest, swap){
+    int i;
+    int j;
+    i = 0;
+    j = 1;
+    std::swap(i, j);
+    std::cout << i << endl;
+    std::cout << j << endl;
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
