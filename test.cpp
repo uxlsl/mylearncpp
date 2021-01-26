@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <thread>
+#include <mutex>
 #include "my.hpp"
 
 
@@ -133,6 +134,16 @@ TEST(MyTest, rvalue){
 	EXPECT_EQ(i, 19);
 	int j = i;
 	EXPECT_EQ(19, j);
+}
+
+TEST(MyTest, lock){
+	std::mutex m;
+	std::lock_guard<std::mutex> lk(m);
+}
+
+TEST(MyTest, lock2){
+	std::mutex m;
+	std::scoped_lock lock(m);
 }
 
 int main(int argc, char *argv[])
