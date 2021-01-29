@@ -64,3 +64,12 @@ string Dog::getName(){
 auto getValue(){
     return 100;
 }
+
+class Cat{
+public:
+static int age;
+static void run(){
+	std::cout << Cat::age;
+}};
+
+int Cat::age = 122;

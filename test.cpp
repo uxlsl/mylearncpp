@@ -154,6 +154,21 @@ TEST(MyTest, st){
 	EXPECT_EQ(s.find("he"), 0);
 }
 
+TEST(MyTest, tarr){
+	int a[3] = {1,2,3};
+	EXPECT_EQ(12, sizeof(a));
+	
+}
+
+TEST(MyTest, sleep){
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+}
+
+TEST(MyTest, Cat){
+	Cat::run();
+}
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
