@@ -174,6 +174,15 @@ TEST(MyTest, myMax){
 
 }
 
+TEST(MyTest, mySum){
+	EXPECT_EQ(mySum(1, 25), 26);
+}
+
+TEST(MyTest, TestArray){
+	std::array<int, 5> ar1{1,2,3,4,5};
+	EXPECT_EQ(ar1.size(), 5);
+}
+
 
 int main(int argc, char *argv[])
 {

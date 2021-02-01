@@ -78,3 +78,8 @@ template <typename T>
 T myMax(T x, T y){
 	return (x > y)?x:y;
 }
+
+template<typename T>
+T mySum(T x, T y){
+	return x + y;
+}
