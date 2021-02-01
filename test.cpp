@@ -168,6 +168,12 @@ TEST(MyTest, Cat){
 	Cat::run();
 }
 
+TEST(MyTest, myMax){
+
+	EXPECT_EQ(myMax(1, 23), 23);
+
+}
+
 
 int main(int argc, char *argv[])
 {
