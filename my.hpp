@@ -1,85 +1,75 @@
-#include<string>
+#include <string>
 using namespace std;
 
-int add(int i=10){
-    return i;
-}
+int add(int i = 10) { return i; }
 
 namespace Second {
-    int add(int x, int y){
-        return x + y;
-    }
-}
-
+int add(int x, int y) { return x + y; }
+}  // namespace Second
 
 namespace Second {
-    int add(int x, int y, int z){
-        return x + y + z;
-    }
+int add(int x, int y, int z) { return x + y + z; }
+}  // namespace Second
+
+int to100(int &i) {
+  i = 100;
+  return i;
 }
 
-int to100(int& i){
-    i = 100;
-    return i;
-}
+enum ECar { SUV, Wagon, Sedan };
 
-enum ECar
-{
-    SUV,
-    Wagon,
-    Sedan
+ECar GetMyCarType() { return ECar::SUV; }
+
+void f1() { std::cout << "Thread ok!" << endl; };
+
+class Dog {
+  std::string name;
+  int weight;
+
+ public:
+  Dog(string);
+  ~Dog();
+  string getName();
 };
 
-ECar GetMyCarType(){
-    return ECar::SUV;
-}
+Dog::Dog(string dog_name) { name = dog_name; }
 
-void f1(){
-    std::cout << "Thread ok!" << endl;
+Dog::~Dog() {}
+
+string Dog::getName() { return name; }
+
+auto getValue() { return 100; }
+
+class Cat {
+ public:
+  static int age;
+  static void run() { std::cout << Cat::age; }
 };
-
-
-class Dog{
-    std::string name;
-    int weight;
-
-    public:
-        Dog(string);
-        ~Dog();
-        string getName();
-};
-
-Dog::Dog(string dog_name){
-    name = dog_name;
-}
-
-Dog::~Dog(){
-
-}
-
-string Dog::getName(){
-    return name;
-}
-
-auto getValue(){
-    return 100;
-}
-
-class Cat{
-public:
-static int age;
-static void run(){
-	std::cout << Cat::age;
-}};
 
 int Cat::age = 122;
 
 template <typename T>
-T myMax(T x, T y){
-	return (x > y)?x:y;
+T myMax(T x, T y) {
+  return (x > y) ? x : y;
 }
 
-template<typename T>
-T mySum(T x, T y){
-	return x + y;
+template <typename T>
+T mySum(T x, T y) {
+  return x + y;
+}
+
+
+
+class Foo{
+	public:
+	Foo(int x, double y);
+};
+
+
+Foo::Foo(int x, double y){
+
+}
+
+void Func(Foo f){
+	
 }

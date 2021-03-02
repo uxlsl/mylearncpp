@@ -4,10 +4,18 @@
 #include <string>
 #include <thread>
 #include <mutex>
+#include <boost/array.hpp>
+#include <boost/signals2/signal.hpp>
 #include "my.hpp"
 
 
 using namespace std;
+
+
+constexpr int len_foo_aa(){
+	return 10;
+
+}
 
 
 TEST(MyTest, Sum)
@@ -181,6 +189,56 @@ TEST(MyTest, mySum){
 TEST(MyTest, TestArray){
 	std::array<int, 5> ar1{1,2,3,4,5};
 	EXPECT_EQ(ar1.size(), 5);
+}
+
+
+TEST(MyTest, TestArray2){
+	boost::array<int ,5> arr = {1,2,3,4,5};
+	EXPECT_EQ(arr.size(), 5);
+}
+
+struct HelloWorld
+{
+
+void operator()() const{
+	std::cout << "Hello, World!" << std::endl;
+}
+};
+
+TEST(MyTest, Hello23){
+	boost::signals2::signal<void ()> sig;
+	HelloWorld hello;
+    sig.connect(hello);
+	sig();
+}
+
+TEST(MyTest, Hello24){
+	int num = 0x00636261;
+	int * pnum = &num;
+	char * pstr = reinterpret_cast<char *>(pnum);
+}
+
+
+TEST(MyTest, Hello25){
+	char *p = NULL;
+	char *p1 = nullptr;
+
+}
+
+TEST(MyTest, Hello26){
+	
+	int a[len_foo_aa()];
+
+}
+
+TEST(MyTest, Hello27){
+if(int a=100){
+
+}
+}
+
+TEST(MyTest, Hello28){
+	Func({1,2.1});
 }
 
 
