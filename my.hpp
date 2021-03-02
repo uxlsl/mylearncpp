@@ -73,3 +73,33 @@ Foo::Foo(int x, double y){
 void Func(Foo f){
 	
 }
+
+
+class Fish {
+	public:
+		Fish(string name);
+	virtual void swim();
+	private:
+		string name;
+};
+
+Fish::Fish(string name){
+	name = name;
+	swim();
+}
+
+void Fish::swim(){
+	cout << "swim" << endl;
+}
+
+
+
+class AFish:public Fish{
+	public:
+		AFish(string name):Fish(name){};
+		void swim();
+};
+
+void AFish::swim(){
+	cout << "AFish::swim" << endl;
+}

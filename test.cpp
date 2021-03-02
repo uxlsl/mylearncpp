@@ -242,6 +242,15 @@ TEST(MyTest, Hello28){
 }
 
 
+TEST(MyTest, Hello29){
+
+	Fish f("a1");
+	f.swim();
+	Fish *p = new AFish("afish!");
+	p->swim();
+}
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
