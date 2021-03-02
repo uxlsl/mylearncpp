@@ -250,6 +250,11 @@ TEST(MyTest, Hello29){
 	p->swim();
 }
 
+TEST(MyTest, Hello30){
+
+	Mon m=1;
+//	Mon m1 = m;
+}
 
 int main(int argc, char *argv[])
 {

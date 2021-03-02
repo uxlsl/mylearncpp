@@ -103,3 +103,19 @@ class AFish:public Fish{
 void AFish::swim(){
 	cout << "AFish::swim" << endl;
 }
+
+
+class Mon{
+	public:
+		Mon(int i);
+		Mon(const Mon &) = delete;
+		Mon& operator=(const Mon&) = delete;
+	private:
+		int _i;
+};
+
+
+Mon::Mon(int i){
+	_i = i;
+}
+
