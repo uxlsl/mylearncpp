@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <bits/stdc++.h>
 #include <numeric>
 #include <vector>
 #include <string>
@@ -254,6 +255,24 @@ TEST(MyTest, Hello30){
 
 	Mon m=1;
 //	Mon m1 = m;
+}
+
+
+TEST(MyTest, Hello31){
+	int i = 100;
+	float j = (int)i;
+	cout << j << endl;
+	j = static_cast<float>(i);
+	cout << j << endl;
+}
+
+TEST(MyTest, Hello32){
+	
+vector<int> v{1,2,3,4,5};
+
+std::for_each(v.begin(), v.end(), [](int i){
+	std::cout << i << " ";
+});
 }
 
 int main(int argc, char *argv[])
