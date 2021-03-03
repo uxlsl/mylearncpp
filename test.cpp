@@ -275,6 +275,12 @@ std::for_each(v.begin(), v.end(), [](int i){
 });
 }
 
+TEST(MyTest, Hello33){
+	Add1 a(1,2);
+	std::cout << a() << std::endl;
+
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);

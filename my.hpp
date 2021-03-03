@@ -119,3 +119,23 @@ Mon::Mon(int i){
 	_i = i;
 }
 
+
+class Add1{
+	public:
+		Add1(int i, int j);
+		int operator()();
+	private:
+		int _i;
+		int _j;
+};
+
+Add1::Add1(int i, int j){
+	_i = i;
+	_j = j;
+}
+
+int Add1::operator()(){
+	return _i + _j;
+}
+
+
