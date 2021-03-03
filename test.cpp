@@ -281,6 +281,13 @@ TEST(MyTest, Hello33){
 
 }
 
+TEST(MyTest, Hello34){
+	vector<int> a1{1,2,3};
+	int i = 100;
+	decltype(i) i1;
+	i1 = 200;
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
