@@ -288,6 +288,13 @@ TEST(MyTest, Hello34){
 	i1 = 200;
 }
 
+TEST(MyTest, Hello35){
+
+	std::any i = 100;
+	i = 200;
+}
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
