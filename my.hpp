@@ -139,3 +139,8 @@ int Add1::operator()(){
 }
 
 
+template <typename T>
+inline T const & max12(T const &a, T const &b)
+{
+	return a < b? b : a;
+}

@@ -294,6 +294,11 @@ TEST(MyTest, Hello35){
 	i = 200;
 }
 
+TEST(MyTest, Hello36){
+	cout << max12(1,2);
+	cout << max12<float>(1,2);
+}
+
 
 int main(int argc, char *argv[])
 {
