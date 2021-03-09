@@ -297,6 +297,14 @@ TEST(MyTest, Hello35){
 TEST(MyTest, Hello36){
 	cout << max12(1,2);
 	cout << max12<float>(1,2);
+	cout << max12(1,2, 3);
+}
+
+
+TEST(MyTest, Hello37){
+	int a = 100;
+	MyPoint p(&a);
+	p.say();
 }
 
 

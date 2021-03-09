@@ -144,3 +144,22 @@ inline T const & max12(T const &a, T const &b)
 {
 	return a < b? b : a;
 }
+
+
+template<typename T>
+
+inline T const &max12(T const &a, T const &b, T const &c)
+{
+	return max12(max12(a,b),c);
+}
+
+
+
+template <typename T>
+class MyPoint{
+	public:
+		MyPoint(T *a):a_(a){};
+		void say(){std::cout << a_ << std::endl;}
+	private:
+		T *a_=nullptr;
+};
