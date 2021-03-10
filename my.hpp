@@ -163,3 +163,10 @@ class MyPoint{
 	private:
 		T *a_=nullptr;
 };
+
+template<typename T, int N>
+void hello123(T a){
+	for(int i=0; i < N; i++){
+		std::cout << a << std::endl;
+	}
+}

@@ -307,6 +307,9 @@ TEST(MyTest, Hello37){
 	p.say();
 }
 
+TEST(MyTest, Hello38){
+	hello123<int, 12>(12);
+}
 
 int main(int argc, char *argv[])
 {
