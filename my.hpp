@@ -182,3 +182,9 @@ public:void foo() {
 this->exit();        //调用外部
 }};
 
+
+class People{
+public:
+	People(){std::cout << "hello People!";};
+	~People(){std::cout << "Goodbye People!";};
+};

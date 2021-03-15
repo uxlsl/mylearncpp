@@ -7,6 +7,7 @@
 #include <mutex>
 #include <boost/array.hpp>
 #include <boost/signals2/signal.hpp>
+#include <memory>
 #include "my.hpp"
 
 
@@ -310,6 +311,14 @@ TEST(MyTest, Hello37){
 TEST(MyTest, Hello38){
 	hello123<int, 12>(12);
 }
+
+TEST(MyTest, Hello39){
+
+	std::unique_ptr<People> p(new People());
+	std::unique_ptr<People> p1;
+
+}
+
 
 int main(int argc, char *argv[])
 {
