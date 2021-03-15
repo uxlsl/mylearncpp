@@ -170,3 +170,15 @@ void hello123(T a){
 		std::cout << a << std::endl;
 	}
 }
+
+
+template <typename T>
+class Base {
+public:void exit();
+};
+template <typename T>
+class Derived : Base<T> {
+public:void foo() {
+this->exit();        //调用外部
+}};
+
