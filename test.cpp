@@ -312,11 +312,11 @@ TEST(MyTest, Hello38){
 	hello123<int, 12>(12);
 }
 
-TEST(MyTest, Hello39){
-
-	std::unique_ptr<People> p(new People());
-	std::unique_ptr<People> p1;
-
+TEST(MyTest, Hello40){
+	double prices[5] = {1,2,3,4,5};
+	for (double x :prices){
+		cout << x << endl;
+	}
 }
 
 
