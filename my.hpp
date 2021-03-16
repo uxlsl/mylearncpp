@@ -188,3 +188,9 @@ public:
 	People(){std::cout << "hello People!";};
 	~People(){std::cout << "Goodbye People!";};
 };
+
+double *find_ar(double *ar, int n, const double &val) {
+  for (int i = 0; i < n; i++)
+    if (ar[i] == val) return &ar[i];
+  return 0;  // or, in C++11, return nullptr;
+}
