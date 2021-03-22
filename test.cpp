@@ -319,6 +319,13 @@ TEST(MyTest, Hello40){
 	}
 }
 
+TEST(MyTest, Hello41){
+	tuple<int,float> t(1,2.22);
+}
+
+TEST(MyTest, Hello42){
+	cout << numeric_limits<short>::max() << endl;
+}
 
 int main(int argc, char *argv[])
 {
