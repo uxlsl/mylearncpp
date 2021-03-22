@@ -327,6 +327,15 @@ TEST(MyTest, Hello42){
 	cout << numeric_limits<short>::max() << endl;
 }
 
+
+TEST(MyTest, Hello43){
+	vector<int> coll ={1,2,3,4,5};
+for_each(coll.begin(), coll.end(), [](int elem){
+	cout << elem << ' ';
+});
+}
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
