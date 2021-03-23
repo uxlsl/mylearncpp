@@ -350,8 +350,23 @@ for_each(coll.begin(), coll.end(), PrintInt());
 TEST(MyTest, Hello45){
 	vector<int> coll1;
 	vector<int>::iterator pos = coll1.begin();
-	reverse(++pos, coll1.end());
+	// reverse(++pos, coll1.end());
 }
+
+TEST(MyTest, Hello46){
+	array<int, 5> coll = {42, 377,611,21,44};
+
+	sort(coll.begin(), coll.end());
+
+	for(int i :coll){
+		std::cout << i << std::endl;
+	};
+
+	if (binary_search(coll.begin(), coll.end(), 42)){
+		cout << "5 is presend" << endl;
+	}
+}
+
 
 
 int main(int argc, char *argv[])
