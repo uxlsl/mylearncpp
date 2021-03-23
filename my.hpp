@@ -194,3 +194,10 @@ double *find_ar(double *ar, int n, const double &val) {
     if (ar[i] == val) return &ar[i];
   return 0;  // or, in C++11, return nullptr;
 }
+
+class PrintInt{
+	public:
+		void operator()(int elem) const {
+			cout << elem << " ";
+		}
+};

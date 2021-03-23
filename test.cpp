@@ -335,6 +335,17 @@ for_each(coll.begin(), coll.end(), [](int elem){
 });
 }
 
+TEST(MyTest, Hello44){
+	
+	vector<int> coll;
+	
+for(int i =1; i <= 9; ++i){
+	coll.push_back(i);
+}
+
+for_each(coll.begin(), coll.end(), PrintInt());
+}
+
 
 int main(int argc, char *argv[])
 {
