@@ -8,6 +8,7 @@
 #include <boost/array.hpp>
 #include <boost/signals2/signal.hpp>
 #include <memory>
+#include <algorithm>
 #include "my.hpp"
 
 
@@ -344,6 +345,12 @@ for(int i =1; i <= 9; ++i){
 }
 
 for_each(coll.begin(), coll.end(), PrintInt());
+}
+
+TEST(MyTest, Hello45){
+	vector<int> coll1;
+	vector<int>::iterator pos = coll1.begin();
+	reverse(++pos, coll1.end());
 }
 
 
