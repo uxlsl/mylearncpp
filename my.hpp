@@ -201,3 +201,28 @@ class PrintInt{
 			cout << elem << " ";
 		}
 };
+
+
+void writeCharsetToFile(const string&filename){
+	ofstream file(filename);
+	if (!file){
+		cerr << "can not open output file:" << filename << endl;
+		exit(EXIT_FAILURE);
+	}
+	for (int i=32; i < 256; i++){
+		file << "value: " << static_cast<char>(i) << endl;
+	}
+}
+
+class LessThan
+{          
+public:
+	LessThan(int val): _val( val ) { }              
+	int  comp_val() const { return _val;}  // 基值的读取              
+	void comp_val( int nval ){ _val = nval;}   // 基值的写入              
+	bool operator()( int _value ) const {
+		return _val > 101;
+	};          
+	private:
+	int _val;
+};

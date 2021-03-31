@@ -367,7 +367,18 @@ TEST(MyTest, Hello46){
 	}
 }
 
+TEST(MyTest, Hello47){
+	writeCharsetToFile("./foo.txt");
+}
 
+TEST(MyTest, Hello48){
+	LessThan l(10);
+	if (l(100)){
+		cout << "ok";
+	}else{
+		cout << "not ok";
+	}
+}
 
 int main(int argc, char *argv[])
 {
