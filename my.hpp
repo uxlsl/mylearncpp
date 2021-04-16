@@ -231,3 +231,16 @@ class EquipmentPiece {
 	public:
 		EquipmentPiece(int IDNumber){};
 };
+
+
+class TimeKeeper {
+public:    
+TimeKeeper(){ std::cout << "TimeKeeper init";};    
+virtual ~TimeKeeper(){ std::cout << "TimerKeeper ~";};
+} ;
+
+
+class AtomicClock:public TimeKeeper{
+	public:
+		~AtomicClock(){ std::cout << "~atomic clock!";}
+};

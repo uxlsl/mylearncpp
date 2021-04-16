@@ -389,6 +389,14 @@ TEST(MyTest, Hello49){
 	}
 }
 
+TEST(MyTest, Hello50){
+	TimeKeeper * ptk = new TimeKeeper();
+	delete ptk;
+
+	TimeKeeper * ptk1 = new AtomicClock();
+	delete ptk1;
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
