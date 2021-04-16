@@ -226,3 +226,8 @@ public:
 	private:
 	int _val;
 };
+
+class EquipmentPiece {
+	public:
+		EquipmentPiece(int IDNumber){};
+};

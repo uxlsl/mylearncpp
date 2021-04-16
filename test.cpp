@@ -380,6 +380,15 @@ TEST(MyTest, Hello48){
 	}
 }
 
+
+TEST(MyTest, Hello49){
+	typedef EquipmentPiece * PEP;
+	PEP bestPieces[10];
+	for (int i=0; i < 10; ++i){
+		bestPieces[i] = new EquipmentPiece(10);
+	}
+}
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
